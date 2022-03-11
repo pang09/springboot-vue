@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    database: 0
+    host: localhost         # Redis服务器地址
+    port: 6379              # Redis服务器连接端口
+    password:               # Redis服务器连接密码（默认为空）
+  application:
+    name: mybatis-plus
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/svproject?characterEncoding=utf-8&useSSL=false
+#  security:
+#    user:
+#      name: yong
+#      password: yong
+
+swagger:
+  enabled: true
+
+jwt:
+  tokenHeader: Authorization
+  secret: springboot-vue
+  expiration: 604800
+  tokenHead: Bearer
+
+aliyun:
+  oss:
+    file:
+      endPoint: "http://oss-cn-beijing.aliyuncs.com"
+      keyid: "LTAI5tQQqiwYh18SaxpHU99o"
+      keysecret: "sa9AdddEmGpJR6EAcJyguZmp9nGCli"
+      #bucket可以在控制台创建，也可以使用java代码创建
+      bucketname: "user-pang1"
