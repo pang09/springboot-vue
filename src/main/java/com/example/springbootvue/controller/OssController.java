@@ -23,9 +23,9 @@ public class OssController {
         //你的endpoint
         String endpoint="oss-cn-beijing.aliyuncs.com";
         //阿里云可以获取到
-        String accesskeyId="LTAI5tQQqiwYh18SaxpHU99o";
+        String accesskeyId="";
         //阿里云可以获取到
-        String accesskeySecret="sa9AdddEmGpJR6EAcJyguZmp9nGCli";
+        String accesskeySecret="";
         //桶的名称  你在运行的时候有可能会报这个桶的名称已经被使用的错误这时候只需要换个没人使用过的名称就可以了
         String buketName="user-pang1";
 
