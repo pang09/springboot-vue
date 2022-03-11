@@ -32,7 +32,7 @@ aliyun:
   oss:
     file:
       endPoint: "http://oss-cn-beijing.aliyuncs.com"
-      keyid: "LTAI5tQQqiwYh18SaxpHU99o"
-      keysecret: "sa9AdddEmGpJR6EAcJyguZmp9nGCli"
+      keyid: ""
+      keysecret: ""
       #bucket可以在控制台创建，也可以使用java代码创建
       bucketname: "user-pang1"
