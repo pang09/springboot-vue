@@ -48,17 +48,11 @@ public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
                 //基于token，不需要session
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .formLogin()
-                    .loginPage("/login")
-                    .permitAll()
-                .successForwardUrl("/index")
-                .and()
-                //授权认证
-                .authorizeRequests()
-                    .mvcMatchers("/register").permitAll()
-                //所有请求都要求认证,必须登录后被访问
-                .anyRequest().authenticated();
+                .and();
+        //授权认证
+//                .authorizeRequests()
+//                //所有请求都要求认证,必须登录后被访问
+//                .anyRequest().authenticated()
 //                //动态权限配置
 //                .withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
 //                    @Override
@@ -78,5 +72,4 @@ public class SecurityConfigTest extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
 }

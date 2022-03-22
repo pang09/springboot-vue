@@ -2,8 +2,8 @@ package com.example.springbootvue.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
 import java.io.Serializable;
+
 
 
 @Data
@@ -17,4 +17,5 @@ public class AdminLogin implements Serializable {
 
     @ApiModelProperty(value = "验证码")
     private String code;
+
 }
