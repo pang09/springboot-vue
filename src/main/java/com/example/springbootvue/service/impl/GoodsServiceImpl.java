@@ -70,4 +70,22 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
         return R.error();
     }
 
+    @Override
+    public R updateGood(Goods goods) {
+        int result=goodsMapper.updateById(goods);
+        if (result==1){
+            return R.ok();
+        }
+        return R.error();
+    }
+
+    @Override
+    public R deleteGood(Integer gid) {
+        int result = goodsMapper.deleteById(gid);
+        if (result==1){
+            return R.ok();
+        }
+        return R.error();
+    }
+
 }

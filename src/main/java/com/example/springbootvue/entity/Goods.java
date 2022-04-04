@@ -15,6 +15,7 @@ public class Goods{
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "gid")
+    @ApiModelProperty(value = "gid")
     @TableId(type = IdType.AUTO)
     private Integer gid;
 

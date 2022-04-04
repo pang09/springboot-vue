@@ -15,4 +15,8 @@ public interface GoodsService extends IService<Goods> {
     R findGoodById(Integer gid);
 
     R addGood(Goods goods);
+
+    R updateGood(Goods goods);
+
+    R deleteGood(Integer gid);
 }

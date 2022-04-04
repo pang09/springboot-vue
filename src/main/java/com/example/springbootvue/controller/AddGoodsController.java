@@ -21,4 +21,18 @@ public class AddGoodsController {
     public R addGood(@RequestBody Goods goods) {
         return goodsService.addGood(goods);
     }
+
+    @ApiOperation(value = "修改商品信息")
+    @ResponseBody
+    @PostMapping("/goods/updateGood")
+    public R updateGood(@RequestBody Goods goods) {
+        return goodsService.updateGood(goods);
+    }
+
+    @ApiOperation(value = "删除商品信息")
+    @ResponseBody
+    @DeleteMapping("/goods/deleteGood/{gid}")
+    public R deleteGood(@PathVariable Integer gid) {
+        return goodsService.deleteGood(gid);
+    }
 }
