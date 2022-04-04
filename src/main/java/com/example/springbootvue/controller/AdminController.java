@@ -58,11 +58,15 @@ public class AdminController {
 
     @ApiOperation(value = "返回用户信息")
     @GetMapping("/user/findUserInfo/{uid}")
-    public Admin findUserInfo(@PathVariable Integer uid){
-        return adminService.findUserInfo(uid);
+    public Admin findUserInfo(@PathVariable Integer uid) throws Exception {
+        Admin userInfo = adminService.findUserInfo(uid);
+        if (userInfo == null){
+            throw new Exception("用户不存在");
+        }
+        return userInfo;
     }
 
-    @ApiOperation(value = "返回用户信息")
+    @ApiOperation(value = "修改用户信息")
     @PostMapping("/user/updateUserInfo")
     public R updateUserInfo(@RequestBody Admin admin){
         return adminService.updateUserInfo(admin);
