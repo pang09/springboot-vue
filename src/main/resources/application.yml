@@ -12,8 +12,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password:
-    url: jdbc:mysql://localhost:3306/svproject?characterEncoding=utf-8&useSSL=false
+    password: 123456
+    url: jdbc:mysql://120.77.27.203:3306/svproject?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
 #  security:
 #    user:
 #      name: yong
@@ -31,8 +31,8 @@ jwt:
 aliyun:
   oss:
     file:
-      endPoint: "http://oss-cn-beijing.aliyuncs.com"
+      endPoint: ""
       keyid: ""
       keysecret: ""
       #bucket可以在控制台创建，也可以使用java代码创建
-      bucketname: "user-pang1"
+      bucketname: ""

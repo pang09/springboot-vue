@@ -21,13 +21,13 @@ public class OssController {
     @ResponseBody
     public String uploadImage(@RequestParam("file") MultipartFile file){
         //你的endpoint
-        String endpoint="oss-cn-beijing.aliyuncs.com";
+        String endpoint="";
         //阿里云可以获取到
         String accesskeyId=" ";
         //阿里云可以获取到
         String accesskeySecret="";
         //桶的名称  你在运行的时候有可能会报这个桶的名称已经被使用的错误这时候只需要换个没人使用过的名称就可以了
-        String buketName="user-pang1";
+        String buketName="";
 
         //这个名称是你存储到oos上的图片名称
         String fileName= file.getOriginalFilename();
